@@ -47,8 +47,6 @@ $total_produk = count($produk);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cia Store</title>
-</head>
-<body>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,16 +64,19 @@ $total_produk = count($produk);
             padding: 15px 40px;
             border-bottom: 1px solid #ddd;
         }
+
         .logo {
             font-size: 20px;
             font-weight: bold;
             color: #111;
         }
+
         .nav-links {
             display: flex;
             gap: 20px;
             list-style: none;
         }
+
         .nav-links a {
             text-decoration: none;
             color: #555;
@@ -89,20 +90,24 @@ $total_produk = count($produk);
             max-width: 1100px;
             margin: 30px auto;
         }
+
         .hero h4 {
             font-size: 12px;
             letter-spacing: 1px;
             margin-bottom: 10px;
             color: #a0aec0;
         }
+
         .hero h1 {
             font-size: 36px;
             margin-bottom: 10px;
         }
+
         .hero p {
             color: #cbd5e0;
             margin-bottom: 20px;
         }
+
         .hero a {
             display: inline-block;
             background: white;
@@ -125,11 +130,13 @@ $total_produk = count($produk);
             align-items: center;
             margin-bottom: 20px;
         }
+
         .catalog-title h2 {
             font-size: 14px;
             color: #718096;
             margin-bottom: 2px;
         }
+
         .catalog-title h1 {
             font-size: 24px;
         }
@@ -151,6 +158,7 @@ $total_produk = count($produk);
             justify-content: space-between;
             transition: transform 0.2s ease;
         }
+
         .product-card:hover {
             transform: translateY(-5px);
         }
@@ -161,6 +169,7 @@ $total_produk = count($produk);
             align-items: flex-start;
             margin-bottom: 15px;
         }
+
         .category {
             font-size: 12px;
             background: #edf2f7;
@@ -175,6 +184,7 @@ $total_produk = count($produk);
             border-radius: 20px;
             font-weight: bold;
         }
+
         .tersedia { 
             background: #c6f6d5; 
             color: #22543d; 
@@ -194,21 +204,25 @@ $total_produk = count($produk);
         .price-box {
             margin: 15px 0;
         }
+
         .normal-price {
             font-size: 16px;
             font-weight: bold;
             color: #2b6cb0;
         }
+
         .price-strikethrough {
             font-size: 14px;
             color: #a0aec0;
             text-decoration: line-through;
         }
+
         .final-price {
             font-size: 18px;
             font-weight: bold;
             color: #e53e3e;
         }
+
         .discount-badge {
             background: #fed7d7;
             color: #9b2c2c;
@@ -239,7 +253,10 @@ $total_produk = count($produk);
             border: none;
             cursor: pointer;
         }
-        .btn-buy:hover { background: #2b6cb0; }
+
+        .btn-buy:hover { 
+            background: #2b6cb0; 
+        }
         
         .btn-disabled {
             background: #e2e8f0;
@@ -255,16 +272,17 @@ $total_produk = count($produk);
             background: #fff;
         }
 
-        /* Responsive Layout Sederhana (Media Query) */
         @media (max-width: 900px) {
             .product-grid { grid-template-columns: repeat(2, 1fr); }
         }
+        
         @media (max-width: 600px) {
             .product-grid { grid-template-columns: 1fr; }
             .hero { padding: 40px 20px; }
         }
     </style>
-
+</head>
+<body>
     <header class="navbar">
         <div class="logo">Cia Store</div>
         <ul class="nav-links">
@@ -282,7 +300,6 @@ $total_produk = count($produk);
     </section>
 
     <main class="container" id="katalog">
-
         <div class="catalog-header">
             <div class="catalog-title">
                 <h2>OUR PRODUCTS</h2>
@@ -301,7 +318,6 @@ $total_produk = count($produk);
                 $harga_asli = $p['harga'];
                 $stok = $p['stok'];
 
-                // Percabangan Status Stok
                 if ($stok > 0) {
                     $status_text = "Tersedia";
                     $status_class = "tersedia";
@@ -347,7 +363,6 @@ $total_produk = count($produk);
                 </div>
             <?php endforeach; ?>
         </div>
-
     </main>
 
     <footer>
